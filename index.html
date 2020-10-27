@@ -56,13 +56,13 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 <paper-header-panel id="main" mode="standard" main>
 <div id="mainToolbar" class="paper-header">
 <div class="site-width layout horizontal">
-<a href="">
+<a href="/">
 <img src="images/logo.png" class="logo-devs" alt="Codelabs Logo">
 </a>
 <div id="searchbar">
 <paper-input-container no-label-float>
 <paper-icon-button prefix icon="search"></paper-icon-button>
-<label>Search</label>
+<label>Pesquisa</label>
 <input is="iron-input" bind-value="{{searchVal}}" on-keydown="onSearchKeyDown">
 </paper-input-container>
 </div>
@@ -70,12 +70,11 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 </div>
 <header id="banner" down$="[[_toBoolean(selectedFilter)]]">
 <div class="site-width">
-<h2 class="banner-title">Welcome to Codelabs!</h2>
+<h2 class="banner-title">Bem-vindos aos Codelabs do ATP! 👋</h2>
 <div class="banner-description" data-filter-selected$="[[_toBoolean(selectedFilter)]]">
 <p class="banner-info">
-Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.
+Estes Codelabs servem de complemento ao <a href="https://events.withgoogle.com/atp2020">Android Training Program, Portugal</a>. Este site vai funcionar como um repositório dos diferentes materiais que vamos criando durante as próximas aulas. Estes podem ser manuais de configuração, exercícios para fazeres, etc.
 <br>
-<a href="https://github.com/googlecodelabs/tools">Codelab tools on GitHub</a>
 </p>
 </div>
 </div>
@@ -85,11 +84,11 @@ Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs w
 <div id="sortby">
 <paper-tabs selected="0" noink on-iron-activate="sortBy">
 <paper-tab>A-Z</paper-tab>
-<paper-tab>Recent</paper-tab>
-<paper-tab>Duration</paper-tab>
+<paper-tab>Recentes</paper-tab>
+<paper-tab>Duração</paper-tab>
 </paper-tabs>
 </div>
-<paper-dropdown-menu label="Choose an event" class="dropdown-filter" no-label-float noink no-animations>
+<paper-dropdown-menu label="Escolhe uma categoria" class="dropdown-filter" no-label-float noink no-animations>
 <paper-listbox id="eventList" slot="dropdown-content" class="dropdown-content">
 </paper-listbox>
 </paper-dropdown-menu>
@@ -97,33 +96,30 @@ Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs w
 <card-sorter id="cards" class="site-width">
 </card-sorter>
 <div id="loading-placeholder" class="site-width">
-Loading Codelabs, please wait...
+A carregar os Codelabs, por favor aguarda...
 </div>
 </main>
 <footer id="footer">
 <div class="footer-wrapper site-width">
 <div class="link-list">
-<label>Connect</label>
+<label>Mais sobre o ATP</label>
 <ul>
-<li><a href="https://www.example.com/">Example</a></li>
+<li><a href="https://events.withgoogle.com/atp2020">Regista-te</a></li>
+</ul>
+<ul>
+<li><a href="https://www.youtube.com/channel/UCIEBWb2nz2huEllUHhH4Lfg">Canal de YouTube</a></li>
+</ul>
+<ul>
+<li><a href="atp-suporte@googlegroups.com">Envia-nos um email</a></li>
 </ul>
 </div>
 <div class="link-list">
-<label>Programs</label>
+<label>Quem somos</label>
 <ul>
-<li><a href="https://www.example.com/">Example</a></li>
-</ul>
-</div>
-<div class="link-list">
-<label>Developer Consoles</label>
-<ul>
-<li><a href="https://www.example.com/">Example</a></li>
-</ul>
-</div>
-<div class="link-list">
-<label>Explore</label>
-<ul>
-<li><a href="https://www.example.com/">Example</a></li>
+<li><a href="https://twitter.com/davilagrau">Andres-Leonardo Martinez-Ortiz</a></li>
+<li><a href="https://twitter.com/cafonsomota">Carlos Mota</a></li>
+<li><a href="https://twitter.com/tallnato">Renato Almeida</a></li>
+<li><a href="">Daniela Ferreira</a></li>
 </ul>
 </div>
 </div>
@@ -131,9 +127,7 @@ Loading Codelabs, please wait...
 <div class="footerbar">
 <div class="site-width layout horizontal center justified">
 <span>
-<a href="https://example.com">Terms</a>
-&nbsp; | &nbsp;
-<a href="https://example.com">Privacy</a>
+<a href="http://bit.ly/2IhF0l3">Código de Conduta</a>
 </span>
 </div>
 </div>
