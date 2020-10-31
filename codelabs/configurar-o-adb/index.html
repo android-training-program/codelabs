@@ -28,7 +28,7 @@
                   feedback-link="https://github.com/android-training-program/codelabs/issues">
     
       <google-codelab-step label="Introdução" duration="0">
-        <p><strong>Last Updated:</strong> 2020-10-28</p>
+        <p><strong>Última actualização:</strong> 2020-10-28</p>
 <h2 is-upgraded><strong>O que é o adb?</strong></h2>
 <p>adb significa Android Debug Bridge e é uma ferramenta que te permite comunicar facilmente com o teu telemóvel. Tens vários comandos que podes utilizar e que vão desde:</p>
 <ul>
@@ -40,7 +40,8 @@
 </ul>
 <h2 is-upgraded><strong>Onde é que se encontra o adb?</strong></h2>
 <p>Quando instalas o <a href="https://developer.android.com/studio" target="_blank">Android Studio</a>, o adb está incluído dentro do Android SDK Platform-Tool, ou seja deves encontrá-lo na directoria: <strong>android_sdk/platform-tools</strong>.</p>
-<aside class="warning"><p><strong>Nota:</strong> Se por acaso não encontras o adb, podes sempre descarregá-lo a partir do <strong>SDK Manager</strong>. Para isso vai a <strong>Tools →SDK Manager </strong>e selecciona:</p>
+<aside class="warning"><p><strong>Nota:</strong> Se por acaso não encontras o adb, podes sempre descarregá-lo a partir do <strong>SDK Manager</strong>. </p>
+<p>Para isso vai a <strong>Tools →SDK Manager </strong>e selecciona:</p>
 <ul>
 <li>Android SDK Platform-Tools</li>
 <li>Android SDK Tools</li>
@@ -62,13 +63,29 @@
 <li>Por baixo de <strong>System variables</strong> adiciona</li>
 </ol>
 <pre>ANDROID_HOME
-C:\Users\{whois}\AppData\Local\Android\Sdk\
+%USERPROFILE%\AppData\Local\Android\Sdk\
 
 ANDROID_PLATFORM_TOOLS
-C:\Users\{whois}\AppData\Local\Android\Sdk\platform_tools
+%USERPROFILE%\AppData\Local\Android\Sdk\platform-tools
 
 ANDROID_TOOLS
-C:\Users\{whois}\AppData\Local\Android\Sdk\tools</pre>
+%USERPROFILE%\AppData\Local\Android\Sdk\tools</pre>
+<aside class="warning"><p><strong>Nota: %USERPROFILE%</strong> corresponde ao teu nome de utilizador.</p>
+<p>Se introduzires na consola <strong>%USERPROFILE%</strong> deve ser impresso:</p>
+<p>C:\Users\&lt;o_teu_username&gt;</p>
+<p>Para confirmar se as directorias estão correctas, podes sempre ir à consola e escrever:</p>
+<p><strong>cd %ANDROID_PLATFORM_TOOLS%</strong></p>
+<p>Deves ser redireccionado para essa directoria.</p>
+</aside>
+<ol type="1" start="5">
+<li>Na lista de <strong>System variables</strong> procura uma que na coluna <strong>Variable</strong> diga <strong>Path</strong></li>
+<li>Selecciona-a e carrega em edit</li>
+<li>Vai para o fim dessa linha e adiciona:</li>
+</ol>
+<pre>;%ANDROID_HOME%;%ANDROID_PLATFORM_TOOLS%;%ANDROID_TOOLS%</pre>
+<ol type="1" start="8">
+<li>Carrega em <strong>OK </strong>até fechares todas as janelas.</li>
+</ol>
 <p>Abre agora a linha de comandos e escreve o <strong>adb:</strong></p>
 <pre>adb</pre>
 <p>E confirma que tudo está a funcionar correctamente.</p>
@@ -86,6 +103,8 @@ global options:
  -P         port of adb server [default=5037]
  -L SOCKET  listen on given socket for adb server 
 ...</pre>
+<aside class="warning"><p><strong>Nota:</strong> Se tiveres a linha de comandos aberta, vais ter de a reiniciar para esta alteração ter efeito.</p>
+</aside>
 
 
       </google-codelab-step>
