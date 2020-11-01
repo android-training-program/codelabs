@@ -1,0 +1,94 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Ligar via WiFi</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="ligar-via-wifi"
+                  title="Ligar via WiFi"
+                  environment="web"
+                  feedback-link="https://github.com/android-training-program/codelabs/issues">
+    
+      <google-codelab-step label="Introdução" duration="0">
+        <p><strong>Última actualização:</strong> 2020-10-31</p>
+<h2 is-upgraded><strong>O que é o adb?</strong></h2>
+<p>adb significa Android Debug Bridge e é uma ferramenta que te permite comunicar facilmente com o teu telemóvel. Tens vários comandos que podes utilizar e que vão desde:</p>
+<ul>
+<li>Ligares-te ao teu telemóvel</li>
+<li>Instalar aplicações</li>
+<li>Fazer <em>debug</em> de uma aplicação</li>
+<li>Gravar o ecrã do teu telemóvel</li>
+<li>Etc.</li>
+</ul>
+<h2 is-upgraded><strong>Configurar o adb</strong></h2>
+<p>Antes de te ligares via Wi-Fi é preciso teres primeiro o adb correctamente configurado. Para confirmar, introduz o comando:</p>
+<pre>adb</pre>
+<p>Na linha de comandos e verifica se o programa foi encontrado. Deves ver uma mensagem semelhante a esta:</p>
+<pre>Android Debug Bridge version 1.0.41
+Version 30.0.4-6686687
+Installed as /Users/carlosmota/Library/Android/sdk/platform-tools/adb
+
+global options:
+ -a         listen on all network interfaces, not just localhost
+ -d         use USB device (error if multiple devices connected)
+ -e         use TCP/IP device (error if multiple TCP/IP devices available)
+ -s SERIAL  use device with given serial (overrides $ANDROID_SERIAL)
+ -t ID      use device with given transport id
+ -H         name of adb server host [default=localhost]
+ -P         port of adb server [default=5037]
+ -L SOCKET  listen on given socket for adb server 
+...</pre>
+<p>Caso contrário, podes ver como configurar a partir deste Codelab:</p>
+<ul>
+<li><a href="https://android-training-program.github.io/codelabs/codelabs/configurar-o-adb/index.html" target="_blank">Configurar o adb</a></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Ligar via Wi-Fi" duration="0">
+        <p>Para te ligares ao teu Android via WiFi, tens de primeiro te ligar via cabo USB ao computador.</p>
+<p>Depois de o teres feito, introduz na linha de comandos/ terminal o comando:</p>
+<pre>adb tcpip 5555</pre>
+<p>Desliga agora o telemóvel do computador e vai no teu telemóvel a:</p>
+<ul>
+<li>Definições → Sobre o telemóvel → Endereço IP</li>
+</ul>
+<p>O endereço que precisas é o último da lista, é constituído por 4 grupos de algarismos separados por um &#34;.&#34;, por exemplo:  192.168.1.74</p>
+<p>Com esse endereço, vai novamente à linha de comandos e executa:</p>
+<pre>adb connect &lt;endereço_ip&gt;</pre>
+<p>Deves ver uma mensagem semelhante a esta, que te diz que o teu computador se conseguiu ligar ao telemóvel:</p>
+<pre>connected to 192.168.1.74:5555</pre>
+<p>Vai ao Android Studio e carrega em instalar a aplicação 🤖 .</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
