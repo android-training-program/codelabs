@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2020-10-31T22:35:59Z",
+  "id": "configurar-o-adb",
+  "duration": 0,
+  "title": "Configurar o adb",
+  "authors": "Carlos Mota",
+  "summary": "Neste codelab vais aprender a configurar o adb para conseguires facilmente executá-lo a partir da linha de comandos.",
+  "source": "1lJTcHc1JsKjpfU-PAMiQrTugITsFvBwIoTF3wtvrMZ4",
+  "theme": "adb",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "adb"
+  ],
+  "tags": [
+    "atp"
+  ],
+  "feedback": "https://github.com/android-training-program/codelabs/issues",
+  "url": "configurar-o-adb"
+}
