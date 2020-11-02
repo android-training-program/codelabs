@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2020-11-02T23:38:01Z",
+  "id": "comandos-adb",
+  "duration": 0,
+  "title": "Comandos adb",
+  "authors": "Carlos Mota",
+  "summary": "Neste codelab vais aprender um conjunto de comandos que podes usar via adb para acederes e interagires com o teu telemóvel.",
+  "source": "1NTmZKXvsOhJdHdkg9YPMtSrLr40268bedCTRsBwyR-Y",
+  "theme": "adb",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "adb"
+  ],
+  "tags": [
+    "atp"
+  ],
+  "feedback": "https://github.com/android-training-program/codelabs/issues",
+  "url": "comandos-adb"
+}
