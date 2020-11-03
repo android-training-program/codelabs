@@ -1,170 +1,230 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
 
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="description" content="Estes Codelabs servem de complemento ao Android Training Program, Portugal. Este site vai funcionar como um repositório dos diferentes materiais que vamos criando durante as próximas aulas. Estes podem ser manuais de configuração, exercícios para fazeres, etc.">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="generator" content="Codelabs">
-<meta name="application-name" content="Codelabs">
-<link rel="canonical" href="https://example.com/">
-<link rel="preconnect" href="https://www.google-analytics.com">
-<script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  <meta charset="utf-8">
+  <meta name="description" content="Estes Codelabs servem de complemento ao Android Training Program, Portugal. Este site vai funcionar como um repositório dos diferentes materiais que vamos criando durante as próximas aulas. Estes podem ser manuais de configuração, exercícios para fazeres, etc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Codelabs">
+  <meta name="application-name" content="Codelabs">
+  <link rel="canonical" href="https://example.com/" />
+  <link rel="preconnect" href="https://www.google-analytics.com" />
+
+  <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
     ga('create', 'UA-49880327-14', 'auto');
     ga('send', 'pageview');
-</script>
-<script async src="https://www.google-analytics.com/analytics.js"></script>
-<title>Codelabs</title>
-<link rel="stylesheet" href="styles/main.css">
-<link rel="import" href="./elements/elements.html">
-<style is="custom-style">
-:root{--paper-tabs-selection-bar-color:currentcolor;--paper-input-container-underline:{display:none};--paper-input-container-underline-focus:{display:none};}.dropdown-filter{--paper-input-container:{padding:8px}} </style>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#455a64">
-<meta name="apple-mobile-web-app-title" content="Codelabs">
-<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="194x194" href="images/favicons/favicon-194x194.png">
-<link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-chrome-192x192.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
-<link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#455a64">
-<meta name="msapplication-TileColor" content="#455a64">
-<meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
-<meta name="theme-color" content="#455a64">
-<meta name="og:type" property="og:type" content="website">
-<meta name="og:title" property="og:title" content="Codelabs">
-<meta name="og:description" property="og:description" content="Estes Codelabs servem de complemento ao Android Training Program, Portugal. Este site vai funcionar como um repositório dos diferentes materiais que vamos criando durante as próximas aulas. Estes podem ser manuais de configuração, exercícios para fazeres, etc.">
-<meta name="og:url" property="og:url" content="https://example.com/">
-<meta name="og:site_name" property="og:site_name" content="Codelabs">
-<meta name="og:determiner" property="og:determiner" content="the">
-<meta name="og:locale" property="og:locale" content="en_US">
-<meta name="og:image" property="og:image" content="images/og-image.png">
-<meta name="og:image:url" property="og:image:url" content="images/og-image.png">
-<meta name="og:image:type" property="og:image:type" content="image/png">
-<meta name="og:image:width" property="og:image:width" content="1200">
-<meta name="og:image:height" property="og:image:height" content="1200">
-<meta name="og:image:alt" property="og:image:alt" content="Codelabs">
-<meta name="twitter:card" property="twitter:card" content="summary_large_image">
-<meta name="twitter:title" property="twitter:title" content="Codelabs">
-<meta name="twitter:description" property="twitter:description" content="Estes Codelabs servem de complemento ao Android Training Program, Portugal. Este site vai funcionar como um repositório dos diferentes materiais que vamos criando durante as próximas aulas. Estes podem ser manuais de configuração, exercícios para fazeres, etc.">
-<meta name="twitter:image" property="twitter:image" content="images/og-image.png">
-<meta name="twitter:url" property="twitter:url" content="https://example.com/">
+    
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  <title>Codelabs</title>
+
+  <link rel="stylesheet" href="styles/main.css">
+
+  
+
+  <link rel="import" href="./elements/elements.html">
+
+  <style is="custom-style">
+    :root {
+      --paper-tabs-selection-bar-color: currentcolor;
+      --paper-input-container-underline: {
+        display: none;
+      };
+      --paper-input-container-underline-focus: {
+        display: none;
+      };
+    }
+
+    .dropdown-filter {
+      --paper-input-container: {
+        padding: 8px;
+      }
+    }
+  </style>
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#455a64">
+  <meta name="apple-mobile-web-app-title" content="Codelabs">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="194x194" href="images/favicons/favicon-194x194.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#455a64">
+  <meta name="msapplication-TileColor" content="#455a64">
+  <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#455a64">
+
+  <meta name="og:type" property="og:type" content="website" />
+  <meta name="og:title" property="og:title" content="Codelabs" />
+  <meta name="og:description" property="og:description" content="Estes Codelabs servem de complemento ao Android Training Program, Portugal. Este site vai funcionar como um repositório dos diferentes materiais que vamos criando durante as próximas aulas. Estes podem ser manuais de configuração, exercícios para fazeres, etc." />
+  <meta name="og:url" property="og:url" content="https://example.com/" />
+  <meta name="og:site_name" property="og:site_name" content="Codelabs" />
+  <meta name="og:determiner" property="og:determiner" content="the" />
+  <meta name="og:locale" property="og:locale" content="en_US" />
+  <meta name="og:image" property="og:image" content="images/og-image.png" />
+  <meta name="og:image:url" property="og:image:url" content="images/og-image.png" />
+  <meta name="og:image:type" property="og:image:type" content="image/png" />
+  <meta name="og:image:width" property="og:image:width" content="1200" />
+  <meta name="og:image:height" property="og:image:height" content="1200" />
+  <meta name="og:image:alt" property="og:image:alt" content="Codelabs" />
+
+  <meta name="twitter:card" property="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" property="twitter:title" content="Codelabs" />
+  <meta name="twitter:description" property="twitter:description" content="Estes Codelabs servem de complemento ao Android Training Program, Portugal. Este site vai funcionar como um repositório dos diferentes materiais que vamos criando durante as próximas aulas. Estes podem ser manuais de configuração, exercícios para fazeres, etc." />
+  <meta name="twitter:image" property="twitter:image" content="images/og-image.png" />
+  <meta name="twitter:url" property="twitter:url" content="https://example.com/" />
 </head>
-<body id="app" is="body-bind" class="loading fullbleed">
-<paper-header-panel id="main" mode="standard" main>
-<div id="mainToolbar" class="paper-header">
-<div class="site-width layout horizontal">
-<a href="/">
-<img src="images/logo.png" class="logo-devs" alt="Codelabs Logo">
-</a>
-<div id="searchbar">
-<paper-input-container no-label-float>
-<paper-icon-button prefix icon="search"></paper-icon-button>
-<label>Pesquisa</label>
-<input is="iron-input" bind-value="{{searchVal}}" on-keydown="onSearchKeyDown">
-</paper-input-container>
-</div>
-</div>
-</div>
-<header id="banner" down$="[[_toBoolean(selectedFilter)]]">
-<div class="site-width">
-<h2 class="banner-title">Bem-vindos aos Codelabs do ATP! 👋</h2>
-<div class="banner-description" data-filter-selected$="[[_toBoolean(selectedFilter)]]">
-<p class="banner-info">
-Estes Codelabs servem de complemento ao <a href="https://events.withgoogle.com/atp2020">Android Training Program, Portugal</a>. Este site vai funcionar como um repositório dos diferentes materiais que vamos criando durante as próximas aulas. Estes podem ser manuais de configuração, exercícios para fazeres, etc.
-<br>
-</p>
-</div>
-</div>
-</header>
-<main>
-<div id="filters" class="site-width layout horizontal center justified">
-<div id="sortby">
-<paper-tabs selected="0" noink on-iron-activate="sortBy">
-<paper-tab>A-Z</paper-tab>
-<paper-tab>Recentes</paper-tab>
-<paper-tab>Duração</paper-tab>
-</paper-tabs>
-</div>
-<paper-dropdown-menu label="Escolhe uma categoria" class="dropdown-filter" no-label-float noink no-animations>
-<paper-listbox id="eventList" slot="dropdown-content" class="dropdown-content">
-</paper-listbox>
-</paper-dropdown-menu>
-</div>
-<card-sorter id="cards" class="site-width">
-<a href="/codelabs/codelabs/comandos-adb/index.html?index=..%2F..index" on-tap="navigate" class="codelab-card category-adb" data-category="adb" data-title="Comandos adb" data-duration="0" data-updated="2020-11-03T00:09:15Z" data-tags="atp" data-pin="">
-<div class="description">Comandos adb</div>
-<div class="card-duration">
-<span></span>
-<span>Updated Nov 3, 2020</span>
-</div>
-<div class="card-footer">
-<div class="category-icon adb-icon"></div>
-<paper-button class="adb-bg">Início</paper-button>
-</div>
-</a>
-<a href="/codelabs/codelabs/configurar-o-adb/index.html?index=..%2F..index" on-tap="navigate" class="codelab-card category-adb" data-category="adb" data-title="Configurar o adb" data-duration="0" data-updated="2020-10-31T22:35:59Z" data-tags="atp" data-pin="">
-<div class="description">Configurar o adb</div>
-<div class="card-duration">
-<span></span>
-<span>Updated Oct 31, 2020</span>
-</div>
-<div class="card-footer">
-<div class="category-icon adb-icon"></div>
-<paper-button class="adb-bg">Início</paper-button>
-</div>
-</a>
-<a href="/codelabs/codelabs/ligar-via-wifi/index.html?index=..%2F..index" on-tap="navigate" class="codelab-card category-adb" data-category="adb" data-title="Ligar via WiFi" data-duration="0" data-updated="2020-10-31T22:36:06Z" data-tags="atp" data-pin="">
-<div class="description">Ligar via WiFi</div>
-<div class="card-duration">
-<span></span>
-<span>Updated Oct 31, 2020</span>
-</div>
-<div class="card-footer">
-<div class="category-icon adb-icon"></div>
-<paper-button class="adb-bg">Início</paper-button>
-</div>
-</a>
-</card-sorter>
-<div id="loading-placeholder" class="site-width">
-A carregar os Codelabs, por favor aguarda...
-</div>f
-</main>
-<footer id="footer">
-<div class="footer-wrapper site-width">
-<div class="link-list">
-<label>Mais sobre o ATP</label>
-<ul>
-<li><a href="https://events.withgoogle.com/atp2020">Regista-te</a></li>
-</ul>
-<ul>
-<li><a href="https://www.youtube.com/channel/UCIEBWb2nz2huEllUHhH4Lfg">Canal de YouTube</a></li>
-</ul>
-<ul>
-<li><a href="atp-suporte@googlegroups.com">Envia-nos um email</a></li>
-</ul>
-</div>
-<div class="link-list">
-<label>Quem somos</label>
-<ul>
-<li><a href="https://twitter.com/davilagrau">Andres-Leonardo Martinez-Ortiz</a></li>
-<li><a href="https://twitter.com/cafonsomota">Carlos Mota</a></li>
-<li><a href="https://twitter.com/tallnato">Renato Almeida</a></li>
-<li><a href="">Daniela Ferreira</a></li>
-</ul>
-</div>
-</div>
-</footer>
-<div class="footerbar">
-<div class="site-width layout horizontal center justified">
-<span>
-<a href="http://bit.ly/2IhF0l3">Código de Conduta</a>
-</span>
-</div>
-</div>
-</paper-header-panel>
-<script src="./scripts/main.js"></script>
+
+<body id="app" is="body-bind" class="loading fullbleed ">
+  <paper-header-panel id="main" mode="standard" main>
+    
+    <div id="mainToolbar" class="paper-header">
+      <div class="site-width layout horizontal">
+        <a href="/">
+          <img src="images/logo.png" class="logo-devs" alt="Codelabs Logo">
+        </a>
+        <div id="searchbar">
+          <paper-input-container no-label-float>
+            <paper-icon-button prefix icon="search"></paper-icon-button>
+            <label>Pesquisa</label>
+            <input is="iron-input" bind-value="{{searchVal}}" on-keydown="onSearchKeyDown">
+          </paper-input-container>
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <header id="banner" down$="[[_toBoolean(selectedFilter)]]">
+      <div class="site-width">
+        
+        <h2 class="banner-title">Bem-vindos aos Codelabs do ATP! 👋</h2>
+        <div class="banner-description"
+             data-filter-selected$="[[_toBoolean(selectedFilter)]]">
+          <p class="banner-info">
+            Estes Codelabs servem de complemento ao <a href="https://events.withgoogle.com/atp2020">Android Training Program, Portugal</a>. Este site vai funcionar como um repositório dos diferentes materiais que vamos criando durante as próximas aulas. Estes podem ser manuais de configuração, exercícios para fazeres, etc.
+            <br>
+          </p>
+          </div>
+      </div>
+    </header>
+
+    <main>
+      <div id="filters" class="site-width layout horizontal center justified">
+        <div id="sortby">
+          <paper-tabs selected="0" noink on-iron-activate="sortBy">
+            <paper-tab>A-Z</paper-tab>
+            <paper-tab>Recentes</paper-tab>
+            <paper-tab>Duração</paper-tab>
+          </paper-tabs>
+        </div>
+
+        
+        <paper-dropdown-menu
+          label="Escolhe uma categoria"
+          class="dropdown-filter"
+          no-label-float
+          noink no-animations
+        >
+          <paper-listbox
+            id="eventList"
+            slot="dropdown-content"
+            class="dropdown-content"
+          >
+          </paper-listbox>
+        </paper-dropdown-menu>
+        </div>
+
+      <card-sorter id="cards" class="site-width">
+		<a href="/codelabs/comandos-adb/index.html?" on-tap="navigate" class="codelab-card category-adb" data-category="adb" data-title="Comandos adb" data-duration="0" data-updated="2020-11-03T00:09:15Z" data-tags="atp" data-pin="">
+		<div class="description">Comandos adb</div>
+		<div class="card-duration">
+		<span></span>
+		<span>Updated Nov 3, 2020</span>
+		</div>
+		<div class="card-footer">
+		<div class="category-icon adb-icon"></div>
+		<paper-button class="adb-bg">Início</paper-button>
+		</div>
+		</a>
+		<a href="/codelabs/configurar-o-adb/index.html" on-tap="navigate" class="codelab-card category-adb" data-category="adb" data-title="Configurar o adb" data-duration="0" data-updated="2020-10-31T22:35:59Z" data-tags="atp" data-pin="">
+		<div class="description">Configurar o adb</div>
+		<div class="card-duration">
+		<span></span>
+		<span>Updated Oct 31, 2020</span>
+		</div>
+		<div class="card-footer">
+		<div class="category-icon adb-icon"></div>
+		<paper-button class="adb-bg">Início</paper-button>
+		</div>
+		</a>
+		<a href="/codelabs/ligar-via-wifi/index.html" on-tap="navigate" class="codelab-card category-adb" data-category="adb" data-title="Ligar via WiFi" data-duration="0" data-updated="2020-10-31T22:36:06Z" data-tags="atp" data-pin="">
+		<div class="description">Ligar via WiFi</div>
+		<div class="card-duration">
+		<span></span>
+		<span>Updated Oct 31, 2020</span>
+		</div>
+		<div class="card-footer">
+		<div class="category-icon adb-icon"></div>
+		<paper-button class="adb-bg">Início</paper-button>
+		</div>
+		</a>
+	  </card-sorter>
+
+      <div id="loading-placeholder" class="site-width">
+        A carregar os Codelabs, por favor aguarda...
+      </div>f
+    </main>
+
+    <footer id="footer">
+      <div class="footer-wrapper site-width">
+        <div class="link-list">
+          <label>Mais sobre o ATP</label>
+          <ul>
+            <li><a href="https://events.withgoogle.com/atp2020">Regista-te</a></li>
+          </ul>
+          <ul>
+            <li><a href="https://www.youtube.com/channel/UCIEBWb2nz2huEllUHhH4Lfg">Canal de YouTube</a></li>
+          </ul>
+          <ul>
+            <li><a href="atp-suporte@googlegroups.com">Envia-nos um email</a></li>
+          </ul>
+        </div>
+        <div class="link-list">
+          <label>Quem somos</label>
+          <ul>
+            <li><a href="https://twitter.com/davilagrau">Andres-Leonardo Martinez-Ortiz</a></li>
+            <li><a href="https://twitter.com/cafonsomota">Carlos Mota</a></li>
+            <li><a href="https://twitter.com/tallnato">Renato Almeida</a></li>
+            <li><a href="">Daniela Ferreira</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div class="footerbar">
+      <div class="site-width layout horizontal center justified">
+        <span>
+          <a href="http://bit.ly/2IhF0l3">Código de Conduta</a>
+        </span>
+      </div>
+    </div>
+
+  </paper-header-panel>
+
+  <script src="./scripts/main.js"></script>
 </body>
 </html>
