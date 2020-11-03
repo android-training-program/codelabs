@@ -76,20 +76,32 @@ global options:
 <p>Se escolheste <strong>install</strong> deves escrever:</p>
 <p><strong>adb install</strong></p>
 </aside>
-<h2 is-upgraded>Instalar/desinstalar uma aplicação</h2>
-<pre>adb [install|uninstall] [flag] [apk]</pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Instalar/desinstalar uma aplicação" duration="0">
+        <pre>adb [install|uninstall] [flag] [apk]</pre>
 <p>Num exemplo real seria algo como:</p>
 <pre>adb install pt.o.nome.do.teu.projecto</pre>
 <aside class="warning"><p><strong>Nota: </strong>se a tua aplicação necessita que o utilizador dê permissões de forma a acederes a funcionalidades externas como o microfone, localização, etc. e estás a correr num telemóvel com Android 6.0 ou superior, podes adicionar a flag <strong>-g</strong> ao comando de instalação de modo a teres todas as permissões dadas quando instalares a app.</p>
 </aside>
 <pre>adb install -g pt.o.nome.do.teu.projecto</pre>
-<h2 is-upgraded>Transferir ficheiros entre o teu computador e o teu telemóvel</h2>
-<pre>adb [push|pull] [source] [destination]</pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Transferir ficheiros entre o teu computador e o teu telemóvel" duration="0">
+        <pre>adb [push|pull] [source] [destination]</pre>
 <p>Se quiseres enviar um ficheiro para o teu telemóvel só tens de escrever:</p>
 <pre>adb push /path/to/filename /storage/emulated/0/</pre>
 <p>Onde <strong>/storage/emulated/0</strong> corresponde ao espaço partilhado no teu Android. Pode ser qualquer outra directoria que queiras, desde que tenhas permissões de escrita para o fazer.</p>
-<h2 is-upgraded>Descarregar um .apk do teu telemóvel para o teu computador</h2>
-<p>Se não sabes qual o <em>package name </em>desse .apk, podes:</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Descarregar um .apk do teu telemóvel para o teu computador" duration="0">
+        <p>Se não sabes qual o <em>package name </em>desse .apk, podes:</p>
 <p>1. Procurar entre todas as aplicações que tens instaladas a partir do comando:</p>
 <pre>adb shell pm list packages</pre>
 <p>E depois de a encontrares, ver em que directoria se encontra:</p>
@@ -123,14 +135,26 @@ global options:
 <pre>adb pull [source] [destination]</pre>
 <p>O que podemos traduzir para:</p>
 <pre>adb pull /data/app/com.your.app.apk your/destination/path</pre>
-<h2 is-upgraded>Apagar todos os dados de uma aplicação</h2>
-<p>Para apagar a <em>cache</em> assim como todos os dados de uma aplicação:</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Apagar todos os dados de uma aplicação" duration="0">
+        <p>Para apagar a <em>cache</em> assim como todos os dados de uma aplicação:</p>
 <pre>adb shell pm clear [package]</pre>
-<h2 is-upgraded>Enviar uma mensagem de texto para o teu telemóvel</h2>
-<p>Estás a fazer um teste que envolve escrever vários caracteres e símbolos? Bem, podes sempre enviar esta mensagem do teu computador directamente para o telemóvel via:</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Enviar uma mensagem de texto para o teu telemóvel" duration="0">
+        <p>Estás a fazer um teste que envolve escrever vários caracteres e símbolos? Bem, podes sempre enviar esta mensagem do teu computador directamente para o telemóvel via:</p>
 <pre>adb shell input text &#34;Hello world!&#34;</pre>
-<h2 is-upgraded>Permissões</h2>
-<pre>adb shell dumpsys package [package]</pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Permissões" duration="0">
+        <pre>adb shell dumpsys package [package]</pre>
 <p>A partir deste comando consegues saber que permissões é que uma determinada aplicação precisa e quais é que foram dadas e quais não foram: </p>
 <pre>adb shell pm [grant|revoke] [package] [permission]</pre>
 <p>Por exemplo, correndo o comando <strong>dumpsys</strong>, consegues saber que a aplicação precisa de aceder à câmara e que esta permissão foi dada.</p>
@@ -153,8 +177,12 @@ adb shell pm revoke com.your.app android.permission.GET_ACCOUNTS</pre>
 <p>Ou então remover directamente a permissão de grupo:</p>
 <pre>adb shell pm reset-permissions [package]</pre>
 <p>Podes encontrar mais informações sobre as permissões de grupo e quais cada grupo contém a partir deste <a href="https://developer.android.com/guide/topics/permissions/overview" target="_blank">link</a>.</p>
-<h2 is-upgraded>Enviar<em> broadcasts</em></h2>
-<p>Podes interagir com diferentes aplicações a partir da utilização de <em>broadcasts</em> com diferentes acções associadas. Por exemplo, para fazer uma chamada podes executar:</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Enviar broadcasts" duration="0">
+        <p>Podes interagir com diferentes aplicações a partir da utilização de <em>broadcasts</em> com diferentes acções associadas. Por exemplo, para fazer uma chamada podes executar:</p>
 <pre>adb shell am start -a android.intent.action.CALL -d tel:[number]</pre>
 <p>Que vai ser traduzido no envio de um <strong>intent</strong> com  a ação <strong>CALL </strong>(chamada) para o <strong>número</strong> (number):</p>
 <pre>  Starting: Intent { act=android.intent.action.CALL dat=tel:xxxxxxxx }</pre>
@@ -165,8 +193,12 @@ adb shell pm revoke com.your.app android.permission.GET_ACCOUNTS</pre>
 <p>Que irá abrir a aplicação de chamadas que tens pré-definida com o número que enviaste.</p>
 <p>Em alternativa, podes sempre enviar uma acção customizada por ti:</p>
 <pre>adb shell am broadcast -a [&#34;action&#34;]</pre>
-<h2 is-upgraded>Eventos do teclado</h2>
-<p>Podes enviar um evento do teu computador para simular um toque no ecrã - só tens de definir as coordenadas onde queres que isso vá acontecer:</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Eventos do teclado" duration="0">
+        <p>Podes enviar um evento do teu computador para simular um toque no ecrã - só tens de definir as coordenadas onde queres que isso vá acontecer:</p>
 <pre>adb shell input tap [x coordinate] [y coordinate]</pre>
 <p>Ou podes sempre enviar o equivalente ao utilizador carregar numa das teclas virtuais:</p>
 <pre>adb shell input keyevent 3   // Home button</pre>
@@ -181,8 +213,12 @@ adb shell input keyevent 64  // Open browser
 adb shell input keyevent 207 // Open contacts</pre>
 <aside class="special"><p><strong>Nota: </strong>Podes encontrar a lista completa de eventos neste <a href="https://developer.android.com/reference/android/view/KeyEvent.html" target="_blank">link</a>.</p>
 </aside>
-<h2 is-upgraded>Logcat</h2>
-<p>Podes aceder ao <strong>logcat </strong>e monitorizar todos os logs do teu telemóvel a partir do comando:</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Logcat" duration="0">
+        <p>Podes aceder ao <strong>logcat </strong>e monitorizar todos os logs do teu telemóvel a partir do comando:</p>
 <pre>adb logcat</pre>
 <p>Contudo, isto vai dar-te os logs de todas as aplicações que tens instaladas, assim como os do sistema. O que pode ser difícil de analisar para procurar uma mensagem específica. Por isso, tens a possibilidade de os filtrar de acordo com a prioridade com que foram definidos. </p>
 <p>Vamos assumir que apenas criaste os logs que estavam na gama de avisos e erros. Para isso corres o comando:</p>
@@ -210,8 +246,12 @@ adb shell input keyevent 207 // Open contacts</pre>
 <pre>adb logcat -s TAG </pre>
 <p>Para ser mais fácil distinguir entre diferentes prioridades de mensagens podes utilizar a flag <strong>-v</strong> com uma cor específica:</p>
 <pre>adb logcat -v color</pre>
-<h2 is-upgraded>Activar/desactivar serviços do telemóvel</h2>
-<p>Há vários comandos que podem ser utilizados para alterar o estado de uma definição nativa ou apenas para saber o estado dela. Por exemplo,</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Activar/desactivar serviços do telemóvel" duration="0">
+        <p>Há vários comandos que podem ser utilizados para alterar o estado de uma definição nativa ou apenas para saber o estado dela. Por exemplo,</p>
 <p>Para alterar o estado do bluetooth para ativo:</p>
 <pre>adb shell am start -a android.bluetooth.adapter.action.REQUEST_ENABLE</pre>
 <p>Ou <strong>REQUEST_DISABLED </strong>para desligar.</p>
@@ -223,8 +263,12 @@ adb shell input keyevent 207 // Open contacts</pre>
 <li>Alguns destes serviços podem ter um nome diferente, dependendo da marca do telemóvel.</li>
 </ol>
 </aside>
-<h2 is-upgraded>Capturar e gravar o ecrã do telemóvel</h2>
-<p>Podes facilmente capturar o ecrã do teu telemóvel a partir do comando:</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Capturar e gravar o ecrã do telemóvel" duration="0">
+        <p>Podes facilmente capturar o ecrã do teu telemóvel a partir do comando:</p>
 <pre>adb shell screencap [device/path/filename.png]</pre>
 <p>Ou gravá-lo se utilizares antes:</p>
 <pre>adb shell screenrecord [device/path/filename.mp4]</pre>
@@ -237,8 +281,12 @@ adb shell input keyevent 207 // Open contacts</pre>
 </aside>
 <p>Depois de gravares, podes descarregar o ficheiro para o teu computador a partir do comando:</p>
 <pre>adb pull [device/path/filename.png] [computer/path]</pre>
-<h2 is-upgraded>Vários telemóveis/emuladores ligados ao/no computador</h2>
-<p>Para acederes à lista de todos os telemóveis que tens ligados ao computador:</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Vários telemóveis/emuladores ligados ao/no computador" duration="0">
+        <p>Para acederes à lista de todos os telemóveis que tens ligados ao computador:</p>
 <pre>adb devices</pre>
 <p>Para instalares uma aplicação num telemóvel específico:</p>
 <pre>adb -s [device id] install [apk]</pre>
@@ -257,8 +305,12 @@ adb shell input keyevent 207 // Open contacts</pre>
 <pre>adb -s [device id] shell [command]</pre>
 <p>E por último, vamos enviar um evento do teclado para o <strong>device id </strong>&#34;emulator-5554&#34;:</p>
 <pre>adb -s emulator-5554 shell input keyevent 5</pre>
-<h2 is-upgraded>Plugins</h2>
-<p>A maior parte destas funcionalidades já se encontram disponíveis na última versão do Android Studio e são bastante simples de utilizar. Para aquelas que estão em falta, existem um conjunto de plugins que podem utilizar:</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Plugins" duration="0">
+        <p>A maior parte destas funcionalidades já se encontram disponíveis na última versão do Android Studio e são bastante simples de utilizar. Para aquelas que estão em falta, existem um conjunto de plugins que podem utilizar:</p>
 <ul>
 <li><a href="https://github.com/pbreault/adb-idea" target="_blank">adb Idea</a></li>
 </ul>
@@ -267,8 +319,12 @@ adb shell input keyevent 207 // Open contacts</pre>
 <li><a href="https://github.com/appdictive/ADBWiFiConnect" target="_blank">adb WiFi Connect</a></li>
 </ul>
 <p>Permite-te enviar instruções via adb para o teu telemóvel sem o teres ligado via USB. Na realidade acaba por ser equivalente ao que fizemos no <a href="https://android-training-program.github.io/codelabs/codelabs/ligar-via-wifi/index.html" target="_blank">Codelab: Ligar via WiFi</a>.</p>
-<h2 is-upgraded>Mais informações</h2>
-<ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Mais informações" duration="0">
+        <ul>
 <li><a href="https://developer.android.com/studio/command-line/adb" target="_blank">Android Developers</a></li>
 <li><a href="https://gist.github.com/Pulimet/5013acf2cd5b28e55036c82c91bd56d8" target="_blank">adb commands Gist</a></li>
 </ul>
