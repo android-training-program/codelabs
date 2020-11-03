@@ -1,0 +1,161 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Configurar o adb</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="configurar-o-adb"
+                  title="Configurar o adb"
+                  environment="web"
+                  feedback-link="https://github.com/android-training-program/codelabs/issues">
+    
+      <google-codelab-step label="Introdução" duration="0">
+        <p><strong>Última actualização:</strong> 2020-10-28</p>
+<h2 is-upgraded><strong>O que é o adb?</strong></h2>
+<p>adb significa Android Debug Bridge e é uma ferramenta que te permite comunicar facilmente com o teu telemóvel. Tens vários comandos que podes utilizar e que vão desde:</p>
+<ul>
+<li>Ligares-te ao teu telemóvel</li>
+<li>Instalar aplicações</li>
+<li>Fazer <em>debug</em> de uma aplicação</li>
+<li>Gravar o ecrã do teu telemóvel</li>
+<li>Etc.</li>
+</ul>
+<h2 is-upgraded><strong>Onde é que se encontra o adb?</strong></h2>
+<p>Quando instalas o <a href="https://developer.android.com/studio" target="_blank">Android Studio</a>, o adb está incluído dentro do Android SDK Platform-Tool, ou seja deves encontrá-lo na directoria: <strong>android_sdk/platform-tools</strong>.</p>
+<aside class="warning"><p><strong>Nota:</strong> Se por acaso não encontras o adb, podes sempre descarregá-lo a partir do <strong>SDK Manager</strong>. </p>
+<p>Para isso vai a <strong>Tools →SDK Manager </strong>e selecciona:</p>
+<ul>
+<li>Android SDK Platform-Tools</li>
+<li>Android SDK Tools</li>
+</ul>
+<p>Carrega em <strong>OK</strong> para instalares.</p>
+</aside>
+<h2 is-upgraded>Como aceder ao adb a partir da linha de comandos?</h2>
+<p>Dependendo do teu Sistema Operativo, existem diferentes formas de configurares os caminhos para a pasta onde o adb se encontra. As próximas secções explicam-te como o podes fazer no Windows e macOS </p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Configurar o adb em Windows" duration="0">
+        <p>Para configurares o adb através da linha de comandos, vais ter de adicionar o <strong>ANDROID_HOME </strong>às variáveis de sistema. Para isso, segue os seguintes passos:</p>
+<ol type="1" start="1">
+<li>Vai a <strong>System → Advanced system settings</strong></li>
+<li>Selecciona a tab que diz <strong>Advanced</strong></li>
+<li>Carrega no botão que diz <strong>Environment Variables...</strong></li>
+<li>Por baixo de <strong>System variables</strong> adiciona</li>
+</ol>
+<pre>ANDROID_HOME
+%USERPROFILE%\AppData\Local\Android\Sdk\
+
+ANDROID_PLATFORM_TOOLS
+%USERPROFILE%\AppData\Local\Android\Sdk\platform-tools
+
+ANDROID_TOOLS
+%USERPROFILE%\AppData\Local\Android\Sdk\tools</pre>
+<aside class="warning"><p><strong>Nota: %USERPROFILE%</strong> corresponde ao teu nome de utilizador.</p>
+<p>Se introduzires na consola <strong>%USERPROFILE%</strong> deve ser impresso:</p>
+<p>C:\Users\&lt;o_teu_username&gt;</p>
+<p>Para confirmar se as directorias estão correctas, podes sempre ir à consola e escrever:</p>
+<p><strong>cd %ANDROID_PLATFORM_TOOLS%</strong></p>
+<p>Deves ser redireccionado para essa directoria.</p>
+</aside>
+<ol type="1" start="5">
+<li>Na lista de <strong>System variables</strong> procura uma que na coluna <strong>Variable</strong> diga <strong>Path</strong></li>
+<li>Selecciona-a e carrega em edit</li>
+<li>Vai para o fim dessa linha e adiciona:</li>
+</ol>
+<pre>;%ANDROID_HOME%;%ANDROID_PLATFORM_TOOLS%;%ANDROID_TOOLS%</pre>
+<ol type="1" start="8">
+<li>Carrega em <strong>OK </strong>até fechares todas as janelas.</li>
+</ol>
+<p>Abre agora a linha de comandos e escreve o <strong>adb:</strong></p>
+<pre>adb</pre>
+<p>E confirma que tudo está a funcionar correctamente.</p>
+<pre>Android Debug Bridge version 1.0.41
+Version 30.0.4-6686687
+Installed as /Users/carlosmota/Library/Android/sdk/platform-tools/adb
+
+global options:
+ -a         listen on all network interfaces, not just localhost
+ -d         use USB device (error if multiple devices connected)
+ -e         use TCP/IP device (error if multiple TCP/IP devices available)
+ -s SERIAL  use device with given serial (overrides $ANDROID_SERIAL)
+ -t ID      use device with given transport id
+ -H         name of adb server host [default=localhost]
+ -P         port of adb server [default=5037]
+ -L SOCKET  listen on given socket for adb server 
+...</pre>
+<aside class="warning"><p><strong>Nota:</strong> Se tiveres a linha de comandos aberta, vais ter de a reiniciar para esta alteração ter efeito.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Configurar o adb em macOS" duration="0">
+        <p>Para configurares o adb através da linha de comandos, segue os seguintes passos:</p>
+<ol type="1" start="1">
+<li>Começa por abrir o <strong>Terminal</strong></li>
+<li>Abre o ficheiro <strong>bash_profile</strong></li>
+</ol>
+<p>Podes fazê-lo através do seguinte comando:</p>
+<pre>nano ~/.bash_profile</pre>
+<ol type="1" start="3">
+<li>Adiciona agora a localização do Android SDK a este ficheiro</li>
+</ol>
+<p>Para isso, escreve no <strong>bash_profile</strong>:</p>
+<pre>export ANDROID_SDK_ROOT=/Users/${whois}/Library/Android/sdk
+
+export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$PATH</pre>
+<ol type="1" start="4">
+<li>Carrega em <strong>ctrl + x </strong>seguido de <strong>y</strong> e da tecla <strong>enter </strong>para guardares as tuas alterações.</li>
+<li>Feito!</li>
+</ol>
+<p>Ainda no terminal escreve agora o comando <strong>adb:</strong></p>
+<pre>adb</pre>
+<p>E confirma que tudo está a funcionar correctamente.</p>
+<pre>Android Debug Bridge version 1.0.41
+Version 30.0.4-6686687
+Installed as /Users/carlosmota/Library/Android/sdk/platform-tools/adb
+
+global options:
+ -a         listen on all network interfaces, not just localhost
+ -d         use USB device (error if multiple devices connected)
+ -e         use TCP/IP device (error if multiple TCP/IP devices available)
+ -s SERIAL  use device with given serial (overrides $ANDROID_SERIAL)
+ -t ID      use device with given transport id
+ -H         name of adb server host [default=localhost]
+ -P         port of adb server [default=5037]
+ -L SOCKET  listen on given socket for adb server 
+...</pre>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

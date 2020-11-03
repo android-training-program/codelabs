@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2020-10-31T22:36:06Z",
+  "id": "ligar-via-wifi",
+  "duration": 0,
+  "title": "Ligar via WiFi",
+  "authors": "Carlos Mota",
+  "summary": "Neste codelab vais aprender a instalar uma aplicação via Wi-Fi.",
+  "source": "1Ovl95aiV4PN8LUufAdFksVxV69GkwDh9LvIHUf6WtDc",
+  "theme": "adb",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "adb"
+  ],
+  "tags": [
+    "atp"
+  ],
+  "feedback": "https://github.com/android-training-program/codelabs/issues",
+  "url": "ligar-via-wifi"
+}
